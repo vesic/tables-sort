@@ -1,0 +1,35 @@
+{
+  "name": "tradecore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "api": "concurrently \"json-server --watch db/users.json -p 3001\" \"json-server --watch db/car_purchases.json -p 3002\" \"json-server --watch db/uploads.json -p 3003\"",
+    "serve": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "", 
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0-beta.37",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack-dev-server": "^2.11.0",
+    "@babel/core": "^7.0.0-beta.37",
+    "@babel/preset-env": "^7.0.0-beta.37",
+    "babel-loader": "^8.0.0-beta.0",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "json-server": "^0.12.1",
+    "concurrently": "^3.5.1",
+    "axios": "^0.17.1",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.20.1",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.0",
+    "react-dom": "^16.2.0"
+  }
+}
